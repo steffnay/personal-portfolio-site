@@ -1,0 +1,119 @@
+* {
+  font-family: 'Roboto';
+  background-color: #484848;
+  /* border: 2px solid black; */
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 50px auto auto;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-template-areas:
+  "navigation"
+  "header"
+  "footer"
+}
+
+
+#navigation_container {
+  grid-area: navigation;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 30px;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #484848;
+}
+
+nav a {
+  color: white;
+}
+
+#header_container {
+  grid-area: header;
+  display: grid;
+  grid-template-rows: 100px auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: #fff7e6;
+  color: #000000;
+  justify-items: center;
+}
+
+#header_container h1 {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  text-align: center;
+  background-color: #fff7e6;
+}
+
+#header_container section {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  overflow-wrap: normal;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #fff7e6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.single_project {
+  display: grid;
+  grid-template-rows: 100px auto auto;
+  grid-template-columns: 200px 1fr;
+  background-color: #fff7e6;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  justify-items: left;
+}
+
+.single_project img {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  width: 150px;
+  align: left;
+}
+
+.single_project h2 {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  line-height: 1;
+  text-align: left;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  background-color: #fff7e6;
+}
+
+.single_project h3 {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  line-height: 1;
+  text-align: left;
+  margin: 0px;
+  background-color: #fff7e6;
+  font-size: .9em;
+}
